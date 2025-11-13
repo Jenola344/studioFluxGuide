@@ -16,6 +16,7 @@ import AnalyticsDashboard from "@/components/analytics-dashboard";
 import TradeCard from "@/components/trade-card";
 import DeFiGuide from "@/components/defi-guide";
 import { Wallet } from "lucide-react";
+import WalletConnector from "@/components/wallet-connector";
 
 export default function Home() {
   return (
@@ -58,11 +59,7 @@ export default function Home() {
             <Bell className="h-4 w-4" />
             <span className="sr-only">Toggle notifications</span>
           </Button>
-          <Button className="relative overflow-hidden group">
-            <span className="transition-all duration-500 ease-in-out group-hover:pr-4">Connect Wallet</span>
-            <Wallet className="absolute right-2 top-1/2 -translate-y-1/2 h-4 w-4 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100" />
-            <div className="absolute inset-0 -translate-x-full transform bg-white bg-opacity-20 transition-transform duration-500 ease-in-out group-hover:translate-x-0" />
-          </Button>
+          <WalletConnector />
         </header>
         <main className="flex-1 space-y-6 p-4 md:p-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
