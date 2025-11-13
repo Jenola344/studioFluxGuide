@@ -1,12 +1,12 @@
+
 "use client";
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useEffect } from "react";
-import { useAccount, useDisconnect } from "wagmi";
+import { useAccount } from "wagmi";
 
 export default function WalletConnector() {
   const { address, isConnected, chain } = useAccount();
-  const { disconnect } = useDisconnect();
 
   useEffect(() => {
     if (isConnected) {
